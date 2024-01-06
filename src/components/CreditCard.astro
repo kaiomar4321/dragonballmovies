@@ -1,0 +1,18 @@
+---
+interface Props {
+    oficio: string
+    persona: string | undefined
+}
+
+
+const {oficio, persona } = Astro.props
+
+---
+<div class=" flex w-full flex-row items-center ">
+    <p class=" w-1/2 text-end px-1">{oficio}</p>
+    <p id="desc" class=" px-1 text-sm font-sans tracking-tight">{persona}</p>
+  </div>
+
+  <style>
+
+  </style>

@@ -1,0 +1,33 @@
+---
+import type { Movie } from "../lib/data";
+interface Props {
+  movie: Movie;
+}
+
+const { movie } = Astro.props;
+const { id, title, hero } = movie;
+//clas:list
+
+---
+
+<a
+  href=`/movies/${id}`
+  class="group relative movie-item transition-all duration-1000 border-2 w-56 mx-auto h-36 p-1 bg-cover border-white bg-red-600"
+  transition:name=`movie ${id} box`
+  style=`background-image: url());`
+>
+  <div class="relative w-3/4 h-full z-20">
+    <h3 class="text-6xl" transition:name=`movie ${id} db`>Dragonball</h3>
+    <h4 transition:name=`movie ${id} title` class="text-3xl leading-5">
+      {title}
+    </h4>
+  </div>
+  <h1 class="absolute bottom-0 right-0 z-20" transition:name=`movie ${id} id`>
+    {id}
+  </h1>
+  <img
+    transition:name=`movie ${id} image`
+    src={hero}
+    class="absolute w-1/2 h-full top-0 right-0 object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+  />
+</a>
